@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="90dp">
+
+    <ImageView
+        android:id="@+id/iv_play_pause_play_list"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_play_noti" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/iv_delete"
+        android:layout_toRightOf="@id/iv_play_pause_play_list"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title_play_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:text="bkjsngkbkb"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_author_play_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_play_list"
+            android:lines="1"
+            android:text="bkjsngkbkb"
+            android:textColor="@color/colorFade"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_delete" />
+
+
+</RelativeLayout>

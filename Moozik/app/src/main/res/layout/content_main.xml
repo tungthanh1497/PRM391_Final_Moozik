@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <com.victor.loading.newton.NewtonCradleLoading
+        android:id="@+id/ncl_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:elevation="9999dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_back_ground_loading"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_huge_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tl_main"
+        android:elevation="1dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_layout_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/rl_mini_player">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_mini_player"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f5f5f5"
+            android:clickable="true"
+            android:paddingLeft="16dp"
+            android:visibility="gone">
+
+            <SeekBar
+                android:id="@+id/sb_seekbar_mini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:thumb="@null" />
+
+            <ImageView
+                android:id="@+id/iv_ava_song_mini"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/sb_seekbar_mini"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@color/colorFade" />
+
+
+            <TextView
+                android:id="@+id/tv_name_song_mini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sb_seekbar_mini"
+                android:layout_toRightOf="@id/iv_ava_song_mini"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="ABCgnbsrtfgnsgnfgnnf"
+                android:textColor="@color/colorBlue"
+                android:textStyle="bold" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_author_song"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/tv_name_song"-->
+            <!--android:layout_toRightOf="@id/iv_ava_song"-->
+            <!--android:ellipsize="end"-->
+            <!--android:maxLines="1"-->
+            <!--android:text="ABCsfgnsgnsfgnsfn"-->
+            <!--android:textColor="@color/colorPrimaryDark" />-->
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_play_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:elevation="3dp"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:elevation="2dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed" />
+
+</RelativeLayout>
